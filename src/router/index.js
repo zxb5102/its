@@ -2,8 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-const Test = ()=>import('../components/Test.vue');
-const Test2 = ()=>import('../components/Test2.vue');
+const Index = ()=>import('../components/Index.vue');
 
 export function createRouter () {
   return new Router({
@@ -11,8 +10,8 @@ export function createRouter () {
     fallback: false,
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-      { path: '/test2',  component: Test2 },
-      { path: '/*', component: Test },
+      { path: '/', redirect:'/index'},
+      { path: '/index',  component: Index ,name:'index'},
     ]
   })
 }

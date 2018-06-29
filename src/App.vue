@@ -1,9 +1,22 @@
 <template>
   <div id="app">
-      <router-link to="/test">test page</router-link>
-      <br>
-      <router-link to="/test2">test2 page</router-link>
-      <router-view class="view"></router-view>
+    <Header/>
+    <router-view></router-view>
+    <Footer/>
   </div>
 </template>
+<script>
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+export default {
+  data(){
+
+  },
+  components:{Header,Footer}
+};
+</script>
+<style lang="less" scoped>
+</style>
+
+
 

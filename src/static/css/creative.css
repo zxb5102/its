@@ -597,6 +597,12 @@ section {
     .common-header-height {
         height: 75%;
     }
+    .each-page {
+        height: auto !important;
+        padding-top: 60px;
+        padding-bottom: 10px;
+        min-height:450px; 
+    }
     footer,
     section {
         padding: 0px;
@@ -635,7 +641,7 @@ section {
     header {
         background-position-x: 70%;
     }
-    footer {
+    .footer-pda-index {
         padding: 20px 0px;
         text-align: center;
         height: auto;
@@ -644,6 +650,13 @@ section {
         top: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
+    }
+    footer {
+        padding: 20px 0px;
+        text-align: center;
+        height: auto;
+        position: absolute;
+        width: 100%;
     }
     p {
         margin-bottom: 5px;
@@ -728,4 +741,85 @@ section {
     100% {
         background-position: -100% 0;
     }
+}
+
+/**/
+
+.router-link-active {
+    color: #70ca39 !important
+}
+
+/*page 通用 css*/
+
+.text-hold {
+    width: 77%;
+    min-height: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: rgba(247, 247, 247, 0.5);
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 25px;
+    line-height: 39px;
+    letter-spacing: 2px;
+    text-indent: 54px;
+}
+
+@media screen and (max-width: 768px) {
+    .text-hold {
+        width: 95%;
+        min-height: 0ps;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        background-color: rgba(247, 247, 247, 0.5);
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 25px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-indent: 24px;
+        margin: auto;
+        /* position: relative;
+        top:60px; */
+    }
+}
+
+/* 可以设置不同的进入和离开动画 */
+
+/* 设置持续时间和动画函数 */
+
+.go-enter {
+    transform: translate(100%, 0%)
+}
+
+.go-enter-to {
+    transform: translate(0%, 0%)
+}
+
+.go-enter-active {
+    transition: all .5s cubic-bezier(0, 0, 1, 1);
+}
+
+.go-leave-active {
+    /* position: fixed; */
+    transition: all .5s cubic-bezier(0, 0, 1, 1);
+}
+
+.go-leave{
+    position: fixed !important;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+.go-leave-to {
+    transform: translateX(-100%);
+    position: fixed !important;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
 }

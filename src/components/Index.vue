@@ -14,7 +14,8 @@
                             <div class="col-lg-10 col-lg-offset-1 text-center">
                                 <p>南昌盛唐信息科技有限公司是一家以信息系统集成、信息系统运维、信息技术培训为核心业务的信息科技服务公司， 客户遍及国内制造、医疗、金融、教育、通信、信息技术服务、建筑等众多行业。
                                 </p>
-                                <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a>
+                                <router-link to="/page/about"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl"></a> -->
                             </div>
                         </div>
                     </div>
@@ -33,7 +34,8 @@
                         <div class="row">
                             <div class="col-lg-8 col-lg-offset-2 text-center">
                                 <p>盛唐通过采用功能集成、网络集成、软件集成等多种集成技术，提供组建企业网、网络安全、数据库高性能集群、数据中心建设、BS软件开发、嵌入式开发等信息系统集成。</p>
-                                <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a>
+                                <router-link to="/page/integration"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a> -->
                             </div>
                         </div>
                     </div>
@@ -51,7 +53,8 @@
                         <div class="row">
                             <div class="col-lg-6 col-lg-offset-3 text-center">
                                 <p>通过对IT运维的标准化，实现IT运行的可靠性、提高企业IT服务的管理水准，满足业务发展对IT基础架构的快速变更和高效管理的要求。</p>
-                                <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a>
+                                 <router-link to="/page/maintenance"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a> -->
                             </div>
                         </div>
                     </div>
@@ -61,7 +64,7 @@
                 <header style="position: relative;" class="common-header-height" id="train">
                     <div class="train-text-hold wow zoomIn">
                         <h2>技术培训</h2>
-                        <p>因为领航 所以前言......</p>
+                        <p>因为领航 所以前沿......</p>
                     </div>
                 </header>
 
@@ -70,7 +73,8 @@
                         <div class="row">
                             <div class="col-lg-6 col-lg-offset-3 text-center">
                                 <p>根据企业实际情况设计分析案例，指定针对性强的培训方案，安排专家，精心准备和筹划，力求达到最佳的培训效果。</p>
-                                <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a>
+                                <router-link to="/page/train"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a> -->
                             </div>
                         </div>
                     </div>
@@ -78,7 +82,7 @@
             </div>
 
             <div class="swiper-slide">
-                <Footer/>
+                <Footer class="footer-pda-index" />
             </div>
         </div>
     </div>
@@ -88,11 +92,25 @@
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 export default {
+  created() {
+    this.$store.dispatch("SET_HEADER_FLAG", "index");
+    // console.log(11);
+  },
+  // mounted() {
+  //   this.$store.dispatch("SET_HEADER_FLAG", "index");
+  // $('.navbar-nav').children().eq(0).addClass('active');
+  // // console.log('111');
+  // // alert();
+  // },
   data() {
     return {};
   },
-  components: { Footer ,Header},
+  components: { Footer, Header },
   mounted: function() {
+    $(".navbar-nav")
+      .children()
+      .eq(0)
+      .addClass("active");
     var mySwiper;
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $("a.page-scroll").bind("click", function(event) {
@@ -123,11 +141,6 @@ export default {
     $("body").scrollspy({
       target: ".navbar-fixed-top",
       offset: 51
-    });
-
-    // Closes the Responsive Menu on Menu Item Click
-    $(".navbar-collapse ul li a").click(function() {
-      $(".navbar-toggle:visible").click();
     });
 
     // Fit Text Plugin for Main Header

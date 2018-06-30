@@ -1,18 +1,20 @@
 <template>
   <div>
     <Header/>
-    <router-view></router-view>
+    <transition name="go">
+        <router-view></router-view>
+    </transition>
     <Footer/>
   </div>
 </template>
 <script>
-import Header from './Header.vue'
-import Footer from './Footer.vue'
+import Header from "./Header.vue";
+import Footer from "./Footer.vue";
 export default {
-  data(){
+  //   data(){
 
-  },
-  components:{Header,Footer}
+  //   },
+  components: { Header, Footer }
 };
 </script>
 <style lang="less" scoped>

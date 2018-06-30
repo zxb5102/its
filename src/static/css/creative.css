@@ -187,7 +187,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url("../img/top.jpg");
+    background-image: url("../img/index/top.jpg");
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -494,15 +494,15 @@ body {
 }
 
 #integration {
-    background-image: url(../img/integration.jpg)
+    background-image: url(../img/index/integration.jpg)
 }
 
 #maintenance {
-    background-image: url(../img/maintenance.jpg)
+    background-image: url(../img/index/maintenance.jpg)
 }
 
 #train {
-    background-image: url(../img/train.jpg)
+    background-image: url(../img/index/train.jpg)
 }
 
 @media screen and (min-width: 970px) {

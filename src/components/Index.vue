@@ -1,4 +1,6 @@
 <template>
+  <div style="height:100%;">
+    <Header/>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -80,14 +82,16 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 <script>
 import Footer from "./Footer.vue";
+import Header from "./Header.vue";
 export default {
   data() {
     return {};
   },
-  components: { Footer },
+  components: { Footer ,Header},
   mounted: function() {
     var mySwiper;
     // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -203,222 +207,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.top-text {
-  position: absolute;
-  left: 9%;
-  top: 33%;
-  width: 47%;
-  height: auto;
-}
-
-.common-header-height {
-  height: calc(100vh - 167px);
-}
-
-#integration {
-  background-image: url(../img/integration.jpg);
-}
-
-#maintenance {
-  background-image: url(../img/maintenance.jpg);
-}
-
-#train {
-  background-image: url(../img/train.jpg);
-}
-
-@media screen and (min-width: 970px) {
-  .integration-text-hold h2,
-  .maintenance-text-hold h2,
-  .train-text-hold h2 {
-    font-size: 35px;
-    font-weight: bold;
-    letter-spacing: 5px;
-  }
-  .integration-text-hold p,
-  .maintenance-text-hold p,
-  .train-text-hold p {
-    font-size: 25px;
-    letter-spacing: 4px;
-  }
-}
-
-@media screen and (min-width: 1170px) {
-  .integration-text-hold h2,
-  .maintenance-text-hold h2,
-  .train-text-hold h2 {
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: 5px;
-  }
-  .integration-text-hold p,
-  .maintenance-text-hold p,
-  .train-text-hold p {
-    font-size: 35px;
-    letter-spacing: 4px;
-  }
-}
-
-.integration-text-hold {
-  position: absolute;
-  bottom: 53%;
-  left: 6%;
-  text-align: left;
-}
-
-.train-text-hold {
-  position: absolute;
-  left: 12%;
-  top: 24%;
-  text-align: left;
-  color: #00479d;
-}
-
-.maintenance-text-hold {
-  position: absolute;
-  bottom: 12%;
-  right: 10%;
-  text-align: left;
-}
-
-section {
-  min-height: 177px;
-}
-
-.code {
-  height: 90px;
-}
-
-/* #page-top{
-    overflow: hidden;
-} */
-
-.btn {
-  font-size: 12px;
-}
-
-@media screen and (min-width: 768px) {
-  .swiper-slide {
-    height: 100%;
-  }
-  .swiper-container {
-    /* overflow: scroll; */
-    /* height:100%; */
-  }
-  .swiper-wrapper {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .code {
-    /* margin-left: 45px; */
-    margin-bottom: 20px;
-    height: 80px;
-  }
-  .common-header-height {
-    height: 75%;
-  }
-  footer,
-  section {
-    padding: 0px;
-    min-height: 0px;
-    height: 25%;
-    position: relative;
-  }
-  section > div.container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .btn-xl {
-    padding: 5px 14px;
-  }
-  .integration-text-hold h2,
-  .maintenance-text-hold h2,
-  .train-text-hold h2 {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 5px;
-  }
-  .integration-text-hold p,
-  .maintenance-text-hold p,
-  .train-text-hold p {
-    font-size: 15px;
-    letter-spacing: 4px;
-  }
-  .top-text {
-    position: absolute;
-    left: 5%;
-    top: 42%;
-    width: 90%;
-    height: auto;
-  }
-  header {
-    background-position-x: 70%;
-  }
-  footer {
-    padding: 20px 0px;
-    text-align: center;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
-  p {
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-  .integration-text-hold {
-    position: absolute;
-    bottom: 16%;
-    left: 6%;
-    text-align: left;
-  }
-  #maintenance {
-    /* background-image: url(./img/maintenance.png); */
-    background-position-x: 0%;
-    /* background-position-y: 10px; */
-  }
-  .maintenance-text-hold {
-    position: absolute;
-    /* bottom: 22%;
-        right: 0px; */
-    text-align: left;
-    left: 20px;
-  }
-  .train-text-hold {
-    position: absolute;
-    /* left: 11%;
-        top: 17%; */
-    text-align: left;
-    color: #00479d;
-  }
-  .navbar-default {
-    /* background-color: rgba(0,0,0,0.2); */
-    background-color: rgba(0, 150, 212, 0.76);
-    /* background-color:rgba(255, 255, 255, 0.50) */
-  }
-  .navbar-default .navbar-toggle:focus,
-  .navbar-default .navbar-toggle:hover {
-    background-color: transparent;
-  }
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #cacaca;
-  }
-  .only-pda-letter-space {
-    letter-spacing: 1px !important;
-  }
-  .swiper-slide {
-    background-color: rgba(43, 46, 53, 1);
-    position: relative;
-  }
-  .swiper-container {
-    height: 100%;
-  }
-}
 </style>
 
 

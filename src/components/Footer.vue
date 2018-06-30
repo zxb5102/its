@@ -22,51 +22,6 @@
 export default {};
 </script>
 <style lang="less" scoped>
-.address:hover {
-  color: #60a9ea;
-  cursor: pointer;
-}
-
-.address a {
-  color: inherit;
-  text-decoration: unset;
-}
-.colorful {
-  background-image: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    yellow,
-    orange,
-    red,
-    orange,
-    yellow,
-    green,
-    yellow,
-    orange,
-    red
-  );
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // -webkit-background-size: 200% 100%;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-size: 200% 100%;
-  animation: bgp 5s infinite linear;
-}
-
-/* } */
-
-@keyframes bgp {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -100% 0;
-  }
-}
 </style>
 
 

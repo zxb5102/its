@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header/>
-    <transition name="go">
+    <transition name="go" mode="out-in">
         <router-view></router-view>
     </transition>
     <Footer/>

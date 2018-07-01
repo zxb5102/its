@@ -793,11 +793,13 @@ section {
 /* 设置持续时间和动画函数 */
 
 .go-enter {
-    transform: translate(100%, 0%)
+    /* transform: translate(100%, 0%) */
+    opacity: 0.2;
 }
 
 .go-enter-to {
-    transform: translate(0%, 0%)
+    /* transform: translate(0%, 0%) */
+    opacity: 1;
 }
 
 .go-enter-active {
@@ -810,16 +812,16 @@ section {
 }
 
 .go-leave{
-    position: fixed !important;
+    /* position: fixed !important;
     width: 100%;
     top: 0px;
-    left: 0px;
+    left: 0px; */
 }
 .go-leave-to {
-    transform: translateX(-100%);
-    position: fixed !important;
+    /* transform: translateX(-100%); */
+    /* position: fixed !important;
     width: 100%;
     top: 0px;
-    left: 0px;
-    opacity: 0.5;
+    left: 0px; */
+    opacity: 0.2;
 }

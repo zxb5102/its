@@ -103,12 +103,25 @@ aside {
     color: #eb3812;
 }
 
+@media screen and (min-width:1000px){
+
+    .navbar-default .nav>li>a,
+    .navbar-default .nav>li>a:focus {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        color: #222;
+    }
+    }
+@media screen and (max-width:1000px){
+
 .navbar-default .nav>li>a,
 .navbar-default .nav>li>a:focus {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
     color: #222;
+}
 }
 
 .navbar-default .nav>li>a:hover,

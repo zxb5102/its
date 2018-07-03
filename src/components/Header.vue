@@ -56,6 +56,10 @@ var indexMenu = [
 ];
 var otherMunu = [
   {
+    href: "/index",
+    value: "首页"
+  },
+  {
     href: "/page/about",
     value: "关于盛唐"
   },

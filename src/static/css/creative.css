@@ -771,27 +771,40 @@ section {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background-color: rgba(247, 247, 247, 0.5);
-    font-size: 25px;
+    background-color: rgba(0, 160, 233, 0.60);
+    font-size: 16px;
     padding: 10px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     line-height: 39px;
     letter-spacing: 2px;
-    text-indent: 54px;
+    text-indent: 32px;
+    color: white;
+}
+.text-hold .center-span{
+    position: absolute;
+    display: inline-block;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 @media screen and (max-width: 768px) {
     .text-hold {
         width: 95%;
-        min-height: 0ps;
-        position: absolute;
-        transform: translate(-50%, -50%);
+        min-height: 500px;
+        /* position: absolute; */
+        /* transform: translate(-50%, -50%);
         top: 50%;
-        left: 50%;
-        background-color: rgba(247, 247, 247, 0.5);
+        left: 50%; */
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        /* background-color: rgba(247, 247, 247, 0.5); */
         font-size: 14px;
         padding: 10px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         line-height: 25px;
         letter-spacing: 1px;
         text-indent: 24px;

@@ -14,7 +14,7 @@
                             <div class="col-lg-10 col-lg-offset-1 text-center">
                                 <p>南昌盛唐信息科技有限公司是一家以信息系统集成、信息系统运维、信息技术培训为核心业务的信息科技服务公司， 客户遍及国内制造、医疗、金融、教育、通信、信息技术服务、建筑等众多行业。
                                 </p>
-                                <router-link to="/page/about"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
+                                <router-link to="/page/about"  class="btn btn-default btn-xl">查看更多</router-link>
                                 <!-- <a href="#" class="btn btn-default btn-xl"></a> -->
                             </div>
                         </div>
@@ -34,8 +34,8 @@
                         <div class="row">
                             <div class="col-lg-8 col-lg-offset-2 text-center">
                                 <p>盛唐通过采用功能集成、网络集成、软件集成等多种集成技术，提供组建企业网、网络安全、数据库高性能集群、数据中心建设、BS软件开发、嵌入式开发等信息系统集成。</p>
-                                <router-link to="/page/integration"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
-                                <!-- <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a> -->
+                                <router-link to="/page/integration"  class="btn btn-default btn-xl">查看更多</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl">查看更多</a> -->
                             </div>
                         </div>
                     </div>
@@ -53,8 +53,8 @@
                         <div class="row">
                             <div class="col-lg-6 col-lg-offset-3 text-center">
                                 <p>通过对IT运维的标准化，实现IT运行的可靠性、提高企业IT服务的管理水准，满足业务发展对IT基础架构的快速变更和高效管理的要求。</p>
-                                 <router-link to="/page/maintenance"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
-                                <!-- <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a> -->
+                                 <router-link to="/page/maintenance"  class="btn btn-default btn-xl">查看更多</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl">查看更多</a> -->
                             </div>
                         </div>
                     </div>
@@ -73,28 +73,46 @@
                         <div class="row">
                             <div class="col-lg-6 col-lg-offset-3 text-center">
                                 <p>根据企业实际情况设计分析案例，指定针对性强的培训方案，安排专家，精心准备和筹划，力求达到最佳的培训效果。</p>
-                                <router-link to="/page/train"  class="btn btn-default btn-xl">FIND OUT MORE</router-link>
-                                <!-- <a href="#" class="btn btn-default btn-xl">FIND OUT MORE</a> -->
+                                <router-link to="/page/train"  class="btn btn-default btn-xl">查看更多</router-link>
+                                <!-- <a href="#" class="btn btn-default btn-xl">查看更多</a> -->
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
 
-            <div class="swiper-slide">
-                <Footer class="footer-pda-index" />
+            <div class="swiper-slide" id="index-footer">
+                <Contact v-if="isPda" size="small"></Contact>
+                <Contact v-else></Contact>
+                <Footer v-if="!isPda"/>
+                <div v-else class="index-footer-con">
+                    <div class="p-center">
+                    <p>
+南昌盛唐信息科技有限公司
+                    </p>
+                    <p>
+赣ICP备15008473号 © 2018 nchome.cn
+                    </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     </div>
 </template>
 <script>
+import Contact from "./page/Contact.vue";
 import Footer from "./Footer.vue";
 import Header from "./Header.vue";
 export default {
   created() {
     this.$store.dispatch("SET_HEADER_FLAG", "index");
     // console.log(11);
+  },
+  computed: {
+    isPda: function() {
+      return this.$store.state.isPda;
+    }
   },
   // mounted() {
   //   this.$store.dispatch("SET_HEADER_FLAG", "index");
@@ -105,7 +123,7 @@ export default {
   data() {
     return {};
   },
-  components: { Footer, Header },
+  components: { Footer, Header, Contact },
   mounted: function() {
     $(".navbar-nav")
       .children()
@@ -220,6 +238,20 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.index-footer-con{
+    height:calc(100vh - 450px) ;
+    position: relative;
+    .p-center{
+        font-size: 14px;
+        color:white;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+}
 </style>
 
 

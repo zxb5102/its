@@ -15,26 +15,26 @@ const serverInfo =
   `express/${require('express/package.json').version} ` +
   `vue-server-renderer/${require('vue-server-renderer/package.json').version}`
 
-const proxyOptions = {
-  target: 'http://test.domain.com', // target host
-  changeOrigin: true,               // needed for virtual hosted sites
-  ws: true,                         // proxy websockets
-  pathRewrite: {
-    '^/api': '',     // rewrite path
-  },
-  router: {
-    // when request.headers.host == 'dev.localhost:3000',
-    // override target 'http://www.example.org' to 'http://localhost:8000'
-    // 'dev.localhost:3000' : 'http://localhost:8000'
-  }
-};
+// const proxyOptions = {
+//   target: 'http://test.domain.com', // target host
+//   changeOrigin: true,               // needed for virtual hosted sites
+//   ws: true,                         // proxy websockets
+//   pathRewrite: {
+//     '^/api': '',     // rewrite path
+//   },
+//   router: {
+//     // when request.headers.host == 'dev.localhost:3000',
+//     // override target 'http://www.example.org' to 'http://localhost:8000'
+//     // 'dev.localhost:3000' : 'http://localhost:8000'
+//   }
+// };
 
-var serverProxy = proxy(proxyOptions);
+// var serverProxy = proxy(proxyOptions);
 const app = express()
 /**
  * 配置代理服务器  将 /api 开头的请求代理掉 重定向到 指定的 服务器
  */
-app.use('/api', serverProxy);
+// app.use('/api', serverProxy);
 
 function createRenderer(bundle, options) {
   // https://github.com/vuejs/vue/blob/dev/packages/vue-server-renderer/README.md#why-use-bundlerenderer
@@ -123,9 +123,11 @@ function render(req, res) {
     }
   }
 
+  const isPda = req.get('User-Agent').indexOf('Windows') !== -1 ? false : true ;
   const context = {
     title: '南昌盛唐信息科技有限公司', // default title
-    url: req.url
+    url: req.url,
+    isPda:isPda
   }
   renderer.renderToString(context, (err, html) => {
     if (err) {

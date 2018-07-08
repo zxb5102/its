@@ -50,7 +50,7 @@ var indexMenu = [
     value: "技术培训"
   },
   {
-    href: "#page-footer",
+    href: "#index-footer",
     value: "联系我们"
   }
 ];

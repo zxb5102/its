@@ -10,7 +10,8 @@ Vue.use(Vuex)
 export function createStore () {
   return new Vuex.Store({
     state: {
-      headerFlag:'index'
+      headerFlag:'index',
+      isPda:false,
     },
     actions,
     mutations,

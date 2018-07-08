@@ -5,11 +5,15 @@
                 <img src="../static/img/index/code.jpg" alt="" class="code">
                 <div style="display:inline-block;">
                     <p>南昌盛唐信息科技有限公司</p>
-                    <p>邮编：330038
+                    <!-- <p>邮编：330038
                         <span style="margin-left: 45px;">电话：0791-86829310</span>
+                    </p> -->
+                    <p>
+                        <!-- <a href="https://www.amap.com/place/BZ9LPS00QM" target="_blank" class="alink"></a> -->
+                        地址：南昌红谷滩区赣江北大道888号新力外滩14F
                     </p>
-                    <p style="margin-bottom: 0px">
-                        <a href="https://www.amap.com/place/BZ9LPS00QM" target="_blank" class="alink">地址：南昌红谷滩区赣江北大道888号新力外滩14F</a>
+                    <p style="margin:0px">
+赣ICP备15008473号 © 2018 nchome.cn
                     </p>
                 </div>
             </div>
@@ -55,7 +59,7 @@ export default {};
     margin-right: 0px;
     display: block;
     margin: auto;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 .alink {

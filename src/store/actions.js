@@ -6,6 +6,9 @@ export default {
   // GET_DATA:({commit}) => {
   //   commit('GET_DATA');
   // },
+  CHANGE_AGENT_FLAG:({commit},payload)=>{
+    commit('CHANGE_AGENT_FLAG',payload);
+  },
   SET_HEADER_FLAG:({commit},value)=>{
     commit('SET_HEADER_FLAG',value);
   }

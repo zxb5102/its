@@ -9,6 +9,7 @@ const Contact = () => import("../components/page/Contact.vue");
 const Integration = () => import("../components/page/Integration.vue");
 const Train = () => import("../components/page/Train.vue");
 const Maintenance = () => import("../components/page/Maintenance.vue");
+const Map = () => import("../components/component/Map.vue");
 
 export function createRouter() {
   return new Router({
@@ -17,6 +18,7 @@ export function createRouter() {
     scrollBehavior: () => ({ y: 0 }),
     routes: [
       { path: "/", redirect: "/index" },
+      { path: "/map", component:Map,name:'map' },
       { path: "/index", component: Index, name: "index" },
       {
         path: "/page",

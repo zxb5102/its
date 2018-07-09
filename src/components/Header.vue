@@ -8,8 +8,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <router-link class="navbar-brand page-scroll navbar-logo" to="/index" style="padding: 10px 0px 10px 10px;">
-          <img src="../static/img/logo2.png" alt="" style="height:100%">
+        <router-link class="navbar-brand page-scroll navbar-logo pda-a-pding" to="/index">
+          <img src="../static/img/logo-text.png" alt="" style="height:100%">
         </router-link>
         <!-- <a class="navbar-brand page-scroll " href="/index" style="padding: 10px 0px 10px 10px;">
                     <img src="../static/img/logo2.png" alt="" style="height:100%">
@@ -125,6 +125,14 @@ export default {
   }
   .navbar-logo {
     height: 70px;
+  }
+}
+</style>
+<style lang="less">
+.pda-a-pding {
+  padding: 17px 0px 4px 10px;
+  @media (max-width: 1000px) {
+    padding: 15px 0px 10px 10px;
   }
 }
 </style>
